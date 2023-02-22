@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3 v-text="name"></h3>
+      <input type="text" v-model="age" />
+      <h2>差值表达式</h2>
+      <p>{{age}}</p>
+      <p>{{arr}}</p>
+    </div>
+
+    <script src="./dep.js"></script>
+    <script src="./watcher.js"></script>
+    <script src="./compiler.js"></script>
+    <script src="./observer.js"></script>
+    <script src="./模拟vue2mini版.js"></script>
+    <script>
+      let vm = new Vue({
+        el: '#app',
+        data: {
+          obj: {
+            name: 'xm',
+          },
+          arr: [1, 2, 3],
+          age: 19,
+        },
+      })
+    </script>
+  </body>
+</html>
